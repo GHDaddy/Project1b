@@ -19,39 +19,38 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-html {
+body {
     background: url(../images/stormy-weather-background.jpg) no-repeat;
-    background-size: cover;
-    height: 100%;
+    background-size: 115%;
     font-family: Oxygen, Arial, sans-serif;
 }
 
 #sw{
     padding-left: 2%;
-    font-size: 100%;
+    float: left;
+    display: block;
 }
 
 #header{
     max-width: 100%;
     color: white;
     background-color: rgba(15, 15, 15, 0.72);
-    width: 100%;
-    font-size: 500%;
-    height: 100%;
-    display: flex;
+    font-size: 400%;
+    display: block;
 }
 
 #poem{
-    max-width: 25%;
     font-family: Oxygen, sans-serif;
     color: white;
     border: double white 4px;
-    margin-top: 5rem;
-    margin-left: 5rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 70%;
+    display: block;
     background-color: rgba(15, 15, 15, 0.72);
-    font-size: 150%;
+    font-size: 24px;
     max-font-size:100%;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 blockquote{
@@ -60,43 +59,76 @@ blockquote{
 
 nav  {
     color: #fff;
-    font-size: 50px;
     text-decoration: none;
     opacity: .5;
-    transition: .5s;
-    float: right;
-    margin-top: 4%
+    transition: .2s;
 }
 
 #icons{
-    float: right;
+    display: flex;
     background-color: rgba(15, 15, 15, 0.09);
-    width: 50%;
-    margin-top: 4%;
-    margin-bottom: 90%;
-
+    position: relative;
+    margin-left: 80%;
 }
 
-#mobile:hover {
+#mobile:hover, #tab:hover, #desk:hover {
     opacity: 1;
 }
 
-#tab:hover{
-    opacity: 1;
-}
+/*Icons */
 
-#desk:hover{
-    opacity: 1;
-}
+#mobile2, #tab2, #desk2{
+    margin-right: 1%;
 
-#desk2 {
-    margin-right: 60%;
-}
-
-#tab2 {
-    padding-right:  25%;
 }
 
 
+/* Desktop */
+@media screen and (min-width: 769px) {
+    #desk { opacity: 1;}
+    #poem {
+        width: 30%;
+        margin-left: 10%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 426px) and (max-width: 840px){
+    #tab { opacity: 1;}
+    #poem {font-size: 14px}
+    #sw {font-size: 25px}
+    #icons {font-size: 30px;
+        margin-left: 85%;}
+    #tab{margin: 5px;  }
+    #desk{margin-top: 5px;}
+    #mobile{margin-top: 5px;}
+    #poem {
+        width: 30%;
+        margin-left: 10%;
+    }
+    body {
+        background: url(../images/stormy-weather-background.jpg) no-repeat;
+        font-family: Oxygen, Arial, sans-serif;
+    }
+}
 
 
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 425px){
+    #mobile { opacity: 1;}
+    #poem {
+        font-size: 14px;
+        margin-left: 15%;
+    }
+    #sw {font-size: 25px}
+    #icons {font-size: 30px;
+        margin-left: 70%;}
+    #tab{margin: 5px;  }
+    #desk{margin-top: 5px;}
+    #mobile{margin-top: 5px;}
+    #poem {margin: 12%;}
+    body {
+        background: url(../images/stormy-weather-background.jpg) no-repeat;
+        font-family: Oxygen, Arial, sans-serif;
+    }
+}
